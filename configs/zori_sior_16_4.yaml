@@ -1,0 +1,55 @@
+_BASE_: coco/maskformer2_R50_bs16_50ep.yaml
+DATASETS:
+  TRAIN: ("sior_zsi_16_4_train",)
+  TEST: ("sior_zsi_16_4_val",)
+SOLVER:
+  IMS_PER_BATCH: 2
+  BASE_LR: 0.0000125
+  STEPS: [196402, 207313]
+  MAX_ITER: 218225
+MODEL:
+  META_ARCHITECTURE: "ZORI"
+  SEM_SEG_HEAD:
+    NAME: "ZORIHead"
+    NUM_CLASSES: 16
+  # backbone part.
+  BACKBONE:
+    NAME: "CLIP_KMA"
+  WEIGHTS: ""
+  PIXEL_MEAN: [122.7709383, 116.7460125, 104.09373615]
+  PIXEL_STD: [68.5005327, 66.6321579, 70.32316305]
+  ZORI:
+    CLIP_MODEL_NAME: "convnext_large_d_320"
+    CLIP_PRETRAINED_WEIGHTS: "laion2b_s29b_b131k_ft_soup"
+    EMBED_DIM: 768
+    GEOMETRIC_ENSEMBLE_ALPHA: 0.4
+    GEOMETRIC_ENSEMBLE_BETA: 0.8
+  MASK_FORMER:
+    NUM_OBJECT_QUERIES: 300
+    TEST:
+      SEMANTIC_ON: False
+      INSTANCE_ON: True
+      PANOPTIC_ON: False
+      OBJECT_MASK_THRESHOLD: 0.0
+  
+  GENERALIZED: True
+  #change accordingly for the path below
+  CACHE_BANK:
+    CACHE: True
+    SEEN_KEY: "./out/seen_11/keys_4.pt"
+    SEEN_VALUE: "./out/seen_11/values_4.pt"
+    UNSEEN_KEY: "./out/pseudo_unseen_4/keys_1.pt"
+    UNSEEN_VALUE: "./out/pseudo_unseen_4/values_1.pt"
+    ALPHA: 0.5
+
+  CHANNEL_INDICES: "./out/text_indices/refined_channel_300.pt"
+  VIS_CHANNEL_INDICES: "./out/vis_indices/refined_channel_11_1_160.pt"
+  DEC: True
+
+TEST:
+  EVAL_PERIOD: 200000
+  DETECTIONS_PER_IMAGE: 300
+OUTPUT_DIR: 'zori_sior_16_4'
+SEED: 42
+INPUT:
+  IMAGE_SIZE: 512
