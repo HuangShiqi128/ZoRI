@@ -64,8 +64,8 @@ def _get_nwpu_zsi_seen_instances_meta():
 def register_all_nwpu7_3_instance_seen(root):
     metadata = _get_nwpu_zsi_seen_instances_meta()
     name = "nwpu_zsi_7_3_train"
-    image_root = "/home/shiqi001/data/NWPU/image_patches"
-    json_file = "/home/shiqi001/data/NWPU/instances_train_seen_7_3.json"
+    image_root = "/data/NWPU/images"
+    json_file = "/data/NWPU/annotations/instances_train_seen_7_3.json"
 
     json_file = os.path.join(root, json_file) if "://" not in json_file else json_file
     image_root = os.path.join(root, image_root)
@@ -100,8 +100,8 @@ def _get_nwpu_zsi_test_all_instances_meta():
 def register_all_nwpu7_3_instance_val_all(root):
     metadata = _get_nwpu_zsi_test_all_instances_meta()
     name = "nwpu_zsi_7_3_val"
-    image_root = "/home/shiqi001/data/NWPU/image_patches"
-    json_file = "/home/shiqi001/data/NWPU/instances_val_gzsi.json"
+    image_root = "/data/NWPU/images"
+    json_file = "/data/NWPU/annotations/instances_val_gzsi.json"
 
 
     json_file = os.path.join(root,
@@ -125,8 +125,8 @@ def register_all_nwpu7_3_instance_val_all(root):
 def register_all_nwpu7_3_instance_train_all(root):
     metadata = _get_nwpu_zsi_test_all_instances_meta()
     name = "nwpu_zsi_7_3_train_all"
-    image_root = "/home/shiqi001/data/NWPU/image_patches"
-    json_file = "/home/shiqi001/data/NWPU/instances_train.json"
+    image_root = "/data/NWPU/images"
+    json_file = "/data/NWPU/annotations/instances_train.json"
 
 
     json_file = os.path.join(root,
@@ -164,8 +164,8 @@ def _get_nwpu_zsi_test_unseen_instances_meta():
 def register_all_nwpu7_3_instance_val_unseen(root):
     metadata = _get_nwpu_zsi_test_unseen_instances_meta()
     name = "nwpu_zsi_7_3_val_unseen"
-    image_root = "/home/shiqi001/data/NWPU/image_patches"
-    json_file = "/home/shiqi001/data/NWPU/instances_val_unseen_7_3.json"
+    image_root = "/data/NWPU/images"
+    json_file = "/data/NWPU/annotations/instances_val_unseen_7_3.json"
 
     json_file = os.path.join(root,
                              json_file) if "://" not in json_file else json_file

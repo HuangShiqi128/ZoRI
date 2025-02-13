@@ -85,8 +85,8 @@ def _get_sior_zsi_seen_instances_meta():
 def register_all_sior16_4_instance_seen(root):
     metadata = _get_sior_zsi_seen_instances_meta()
     name = "sior_zsi_16_4_train"
-    image_root = "/media/user/mydrive/data/SIOR_patches/train/images"
-    json_file = "/media/user/mydrive/data/SIOR_patches/train/annotations/instances_train_seen_16_4.json"
+    image_root = "/data/SIOR/train/images"
+    json_file = "/data/SIOR/train/annotations/instances_train_seen_16_4.json"
 
     json_file = os.path.join(root, json_file) if "://" not in json_file else json_file
     image_root = os.path.join(root, image_root)
@@ -121,8 +121,8 @@ def _get_sior_zsi_test_all_instances_meta():
 def register_all_sior16_4_instance_val_all(root):
     metadata = _get_sior_zsi_test_all_instances_meta()
     name = "sior_zsi_16_4_val"
-    image_root = "/media/user/mydrive/data/SIOR_patches/val/images"
-    json_file = "/media/user/mydrive/data/SIOR_patches/val/annotations/instances_val_gzsi.json"
+    image_root = "/data/SIOR/val/images"
+    json_file = "/data/SIOR/val/annotations/instances_val_gzsi.json"
 
 
     json_file = os.path.join(root,

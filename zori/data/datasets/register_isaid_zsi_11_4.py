@@ -77,8 +77,8 @@ def _get_isaid_zsi_seen_instances_meta():
 def register_all_isaid11_4_instance_seen(root):
     metadata = _get_isaid_zsi_seen_instances_meta()
     name = "isaid_zsi_11_4_train"
-    image_root = "/media/user/mydrive/data/iSAID_patches/train/images"
-    json_file = "/media/user/mydrive/data/iSAID_patches/train/annotations/instances_train_seen_11_4.json"
+    image_root = "/data/iSAID_patches/train/images"
+    json_file = "/data/iSAID_patches/train/annotations/instances_train_seen_11_4.json"
 
     json_file = os.path.join(root, json_file) if "://" not in json_file else json_file
     image_root = os.path.join(root, image_root)
@@ -113,8 +113,8 @@ def _get_isaid_zsi_test_all_instances_meta():
 def register_all_isaid11_4_instance_val_all(root):
     metadata = _get_isaid_zsi_test_all_instances_meta()
     name = "isaid_zsi_11_4_val"
-    image_root = "/media/user/mydrive/data/iSAID_patches/val/images"
-    json_file = "/media/user/mydrive/data/iSAID_patches/val/annotations/instances_val_gzsi.json"
+    image_root = "/data/iSAID_patches/val/images"
+    json_file = "/data/iSAID_patches/val/annotations/instances_val_gzsi.json"
 
 
     json_file = os.path.join(root,
@@ -138,8 +138,8 @@ def register_all_isaid11_4_instance_val_all(root):
 def register_all_isaid11_4_instance_train_all(root):
     metadata = _get_isaid_zsi_test_all_instances_meta()
     name = "isaid_zsi_11_4_train_all"
-    image_root = "/media/user/mydrive/data/iSAID_patches/train/images"
-    json_file = "/media/user/mydrive/data/iSAID_patches/train/annotations/instancesonly_filtered_train.json"
+    image_root = "/data/iSAID_patches/train/images"
+    json_file = "/data/iSAID_patches/train/annotations/instancesonly_filtered_train.json"
 
 
     json_file = os.path.join(root,
@@ -178,8 +178,8 @@ def _get_isaid_zsi_test_unseen_instances_meta():
 def register_all_isaid11_4_instance_val_unseen(root):
     metadata = _get_isaid_zsi_test_unseen_instances_meta()
     name = "isaid_zsi_11_4_val_unseen"
-    image_root = "/media/user/mydrive/data/iSAID_patches/val/images"
-    json_file = "/media/user/mydrive/data/iSAID_patches/val/annotations/instances_val_unseen_11_4.json"
+    image_root = "/data/iSAID_patches/val/images"
+    json_file = "/data/iSAID_patches/val/annotations/instances_val_unseen_11_4.json"
 
     json_file = os.path.join(root,
                              json_file) if "://" not in json_file else json_file
