@@ -11,7 +11,7 @@ This repository contains code for our **AAAI2025** paper: [ZoRI: Towards Discrim
 
 ## TODO List ✅
 - [ ] Modules implementation
-- [ ] Dataset release
+- [x] Dataset release
 - [x] Main code release
 
 
@@ -19,13 +19,7 @@ This repository contains code for our **AAAI2025** paper: [ZoRI: Towards Discrim
 Please see [Installation Instructions](INSTALL.md).
 
 ## Datasets
-Download datasets for zero-shot remote sensing instance segmentation from One Drive ☁️.
-###
-[iSAID](),
-[NWPU](),
-[SIOR]().
-### 
-Download links will be updated soon...
+Download datasets for zero-shot remote sensing instance segmentation from [Hugging Face <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face Logo" width="20"/>](https://huggingface.co/datasets/HuangShiqi008/ZoRI).
 
 ## Getting Started
 Please see [Getting Started with ZoRI](GETTING_STARTED.md).
