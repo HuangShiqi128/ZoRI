@@ -10,7 +10,7 @@ This repository contains code for our **AAAI2025** paper: [ZoRI: Towards Discrim
 </div><br/>
 
 ## TODO List ✅
-- [ ] Modules implementation
+- [x] Modules implementation
 - [x] Dataset release
 - [x] Main code release
 
@@ -38,6 +38,11 @@ python train_net.py  --config-file configs/zori_isaid_11_4.yaml --eval-only MODE
 For ZSRI setting, run
 ```
 python train_net.py  --config-file configs/zori_isaid_11_4.yaml --eval-only MODEL.WEIGHTS [path_to_weights] DATASETS.TEST '("isaid_zsi_11_4_val_unseen",)' MODEL.GENERALIZED False MODEL.CACHE_BANK.ALPHA 0.6
+```
+###
+Then get pseudo unseen visual prototypes from previous inference results, run
+```
+python -m zori.utils.cache_model_unseen --config configs/cache.yaml DATASET 'isaid_zsi_11_4_val' PROTOTYPE_NUM [1] RESULTS [path_to_json]
 ```
 ###
 Finally, inference again with pseudo unseen visual prototypes to get final predictions.
