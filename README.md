@@ -1,9 +1,16 @@
 <h2 align="center">ZoRI: Towards Discriminative Zero-Shot Remote Sensing Instance Segmentation</h2>
-<p> <a href="https://arxiv.org/abs/2412.12798"><img src="https://img.shields.io/badge/arXiv-ZoRI-b31b1b.svg"></a>
-<a href="https://arxiv.org/pdf/2412.12798v1"><img src="https://img.shields.io/badge/PDF-8A2BE2"></a>
+<div align="center">
+  <p> 
+    <a href="https://arxiv.org/abs/2412.12798"><img src="https://img.shields.io/badge/arXiv-ZoRI-b31b1b.svg"></a>
+    <a href="https://arxiv.org/pdf/2412.12798v1"><img src="https://img.shields.io/badge/PDF-8A2BE2"></a>
+  </p>
+</div>
 
 
-This repository contains code for our **AAAI2025** paper: [ZoRI: Towards Discriminative Zero-Shot Remote Sensing Instance Segmentation](https://arxiv.org/abs/2412.12798).
+This repository contains code for our **AAAI2025** paper: 
+> [ZoRI: Towards Discriminative Zero-Shot Remote Sensing Instance Segmentation](https://arxiv.org/abs/2412.12798)<br>
+> Shiqi Huang, Shuting He, Bihan Wen<br>
+> AAAI 2025
 
 <div align="center">
   <img src="imgs/framework.png" width="100%" height="100%"/>
