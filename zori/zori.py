@@ -156,9 +156,7 @@ class ZORI(nn.Module):
         n = self.seen_cache_values.shape[0]//sem_seg_head.num_classes
         self.cache_values = torch.concat((self.seen_cache_values, self.unseen_cache_values.repeat(n//2, 1)), dim=0)#[227, 10]
         self.cache_keys = torch.concat((self.seen_cache_keys, self.unseen_cache_keys.repeat(n//2, 1)), dim=0) #[227, 768]
-        self.cache_values = torch.concat((self.seen_cache_values, self.unseen_cache_values), dim=0)#[227, 10]
-        self.cache_keys = torch.concat((self.seen_cache_keys, self.unseen_cache_keys), dim=0) #[227, 768]
-
+ 
     def prepare_class_names_from_metadata(self, metadata, train_metadata):
         def split_labels(x):
             res = []
